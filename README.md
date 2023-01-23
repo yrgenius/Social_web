@@ -2,8 +2,9 @@
 
 [youtube.com](https://www.youtube.com/playlist?list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8)
 
-### `npm start`
+## Запуск приложения 
 
-Запуск приложения
+Для запуска перейдите в корневую папку, содержащую файл package.json 
+и введите в консоле `npm start`
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Приложение откроется у вас в браузере по адресу [http://localhost:3000](http://localhost:3000)
