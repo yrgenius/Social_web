@@ -1,10 +1,10 @@
-import classes from './Profile.module.css';
+import styles from './Profile.module.css';
 
 const Profile = () => {
     return (
-        <main className={classes.main}>
-            <div className={classes.wrapper}>
-                <img className={classes.img} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIJ52TEJj-IDrETYCf6d38-qupU4M2W9M8og&usqp=CAU' />
+        <main className={styles.main}>
+            <div className={styles.wrapper}>
+                <img className={styles.img} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIJ52TEJj-IDrETYCf6d38-qupU4M2W9M8og&usqp=CAU' />
                 <div>
                     ava + description
                 </div>
