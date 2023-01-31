@@ -1,0 +1,17 @@
+.nav {
+  grid-area: nav;
+  font-size: 25px;
+  text-align-last: left;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.list li {
+  margin-bottom: 10px;
+}
+
+ul:first-child {
+  color: aqua;
+}

@@ -1,0 +1,11 @@
+.header {
+  grid-area: header;
+  background-color: white;
+  color: #282c34;
+  max-height: 100px;
+  justify-self: start;
+}
+
+.img {
+  max-height: 100px;
+}
