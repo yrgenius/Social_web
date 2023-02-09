@@ -1,37 +1,43 @@
 import { NavLink } from 'react-router-dom';
-import style from './Dialogs.module.css';
+import styles from './Dialogs.module.css';
+
+const DialogItem = (props) => {
+    let path = `/dialogs/${props.id}`;
+    return (
+        <li className={`${styles.name__item}`}>
+            <NavLink to={path}>{props.name}</NavLink>
+        </li>
+    );
+}
+
+const Message = (props) => {
+    return (
+        <li className={`${styles.dialog__item}`}>{props.message}</li>
+    );
+}
 
 const Dialogs = (props) => {
     return (
-        <div className={`${style.wrapper}`}>
-            <ul className={`${style.name__list}`}>
-                <li className={`${style.name__item}`}>
-                    <NavLink to='/dialogs/1'>Sveta</NavLink></li>
-                <li className={`${style.name__item}`}>
-                    <NavLink to='/dialogs/2'>Sasha</NavLink></li>
-                <li className={`${style.name__item}`}>
-                    <NavLink to='/dialogs/3'>Eva</NavLink></li>
-                <li className={`${style.name__item}`}>
-                    <NavLink to='/dialogs/4'>Evgen</NavLink></li>
-                <li className={`${style.name__item}`}>
-                    <NavLink to='/dialogs/5'>Ksusha</NavLink></li>
-                <li className={`${style.name__item}`}>
-                    <NavLink to='/dialogs/6'>Leo</NavLink></li>
-                <li className={`${style.name__item}`}>
-                    <NavLink to='/dialogs/7'>Donny</NavLink></li>
-                <li className={`${style.name__item}`}>
-                    <NavLink to='/dialogs/8'>Mike</NavLink></li>
-                <li className={`${style.name__item}`}>
-                    <NavLink to='/dialogs/9'>Raphael</NavLink></li>
+        <div className={`${styles.wrapper}`}>
+            <ul className={`${styles.name__list}`}>
+                <DialogItem name='Sveta' id='1' />
+                <DialogItem name='Sasha' id='2' />
+                <DialogItem name='Eva' id='3' />
+                <DialogItem name='Evgen' id='4' />
+                <DialogItem name='Ksusha' id='5' />
+                <DialogItem name='Leo' id='6' />
+                <DialogItem name='Donny' id='7' />
+                <DialogItem name='Mike' id='8' />
+                <DialogItem name='Raphael' id='9' />
             </ul>
-            <ul className={`${style.dialog__list}`}>
-                <li className={`${style.dialog__item}`}>Hello?</li>
-                <li className={`${style.dialog__item}`}>What's up</li>
-                <li className={`${style.dialog__item}`}>It impossible</li>
-                <li className={`${style.dialog__item}`}>Yes</li>
-                <li className={`${style.dialog__item}`}>New user join on web</li>
-                <li className={`${style.dialog__item}`}>Hi all</li>
-                <li className={`${style.dialog__item}`}>Hi</li>
+            <ul className={`${styles.dialog__list}`}>
+                <Message message='Hello?' />
+                <Message message='Whats up' />
+                <Message message='It impossible' />
+                <Message message='Yes' />
+                <Message message='New user join on web' />
+                <Message message='Hi all' />
+                <Message message='Hi' />
             </ul>
         </div>
     );
