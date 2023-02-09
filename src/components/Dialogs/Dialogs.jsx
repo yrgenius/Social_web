@@ -1,18 +1,28 @@
+import { NavLink } from 'react-router-dom';
 import style from './Dialogs.module.css';
 
 const Dialogs = (props) => {
     return (
         <div className={`${style.wrapper}`}>
             <ul className={`${style.name__list}`}>
-                <li className={`${style.name__item}`}>Sveta</li>
-                <li className={`${style.name__item}`}>Sasha</li>
-                <li className={`${style.name__item}`}>Eva</li>
-                <li className={`${style.name__item}`}>Evgen</li>
-                <li className={`${style.name__item}`}>Ksusha</li>
-                <li className={`${style.name__item}`}>Leo</li>
-                <li className={`${style.name__item}`}>Donny</li>
-                <li className={`${style.name__item}`}>Mike</li>
-                <li className={`${style.name__item}`}>Raphael</li>
+                <li className={`${style.name__item}`}>
+                    <NavLink to='/dialogs/1'>Sveta</NavLink></li>
+                <li className={`${style.name__item}`}>
+                    <NavLink to='/dialogs/2'>Sasha</NavLink></li>
+                <li className={`${style.name__item}`}>
+                    <NavLink to='/dialogs/3'>Eva</NavLink></li>
+                <li className={`${style.name__item}`}>
+                    <NavLink to='/dialogs/4'>Evgen</NavLink></li>
+                <li className={`${style.name__item}`}>
+                    <NavLink to='/dialogs/5'>Ksusha</NavLink></li>
+                <li className={`${style.name__item}`}>
+                    <NavLink to='/dialogs/6'>Leo</NavLink></li>
+                <li className={`${style.name__item}`}>
+                    <NavLink to='/dialogs/7'>Donny</NavLink></li>
+                <li className={`${style.name__item}`}>
+                    <NavLink to='/dialogs/8'>Mike</NavLink></li>
+                <li className={`${style.name__item}`}>
+                    <NavLink to='/dialogs/9'>Raphael</NavLink></li>
             </ul>
             <ul className={`${style.dialog__list}`}>
                 <li className={`${style.dialog__item}`}>Hello?</li>

@@ -14,7 +14,7 @@ function App() {
         <div className='wrapper'>
           <Routes>
             <Route element={<Profile />} path='/profile' />
-            <Route element={<Dialogs />} path='/dialogs' />
+            <Route element={<Dialogs />} path='/dialogs/*' />
           </Routes>
         </div>
       </div>
