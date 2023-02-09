@@ -6,6 +6,7 @@
 
 .list {
   list-style-type: none;
+  text-align: left;
 }
 
 .list li {
