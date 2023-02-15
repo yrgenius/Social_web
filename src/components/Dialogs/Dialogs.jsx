@@ -40,27 +40,17 @@ const Dialogs = (props) => {
         { id: 7, name: 'Hi' },
     ];
 
+    let dialogElements = dialogsData.map((dialog) => (<DialogItem name={dialog.name} id={dialog.id} />));
+
+    let messages = messagesData.map(m => (<Message message={m.name} />));
+
     return (
         <div className={`${styles.wrapper}`}>
             <ul className={`${styles.name__list}`}>
-                <DialogItem name='Sveta' id='1' />
-                <DialogItem name='Sasha' id='2' />
-                <DialogItem name='Eva' id='3' />
-                <DialogItem name='Evgen' id='4' />
-                <DialogItem name='Ksusha' id='5' />
-                <DialogItem name='Leo' id='6' />
-                <DialogItem name='Donny' id='7' />
-                <DialogItem name='Mike' id='8' />
-                <DialogItem name='Raphael' id='9' />
+                {dialogElements}
             </ul>
             <ul className={`${styles.dialog__list}`}>
-                <Message message='Hello?' />
-                <Message message='Whats up' />
-                <Message message='It impossible' />
-                <Message message='Yes' />
-                <Message message='New user join on web' />
-                <Message message='Hi all' />
-                <Message message='Hi' />
+                {messages}
             </ul>
         </div>
     );
