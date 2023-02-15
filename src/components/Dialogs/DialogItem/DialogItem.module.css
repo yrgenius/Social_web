@@ -1,0 +1,35 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-left: 1px solid #000;
+}
+
+ul {
+    margin: 0;
+}
+
+.name__list {
+    padding: 10px 50px;
+    text-align: left;
+    background-color: #d0ebc4;
+    list-style: circle;
+}
+
+.name__item {
+    font-size: 32px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.name__item:hover {
+    font-weight: 600;
+}
+
+.dialog__list {
+    background-color: #e3efde;
+    list-style: none;
+    padding: 10px 50px;
+    text-align: left;
+    font-size: 26px;
+}
