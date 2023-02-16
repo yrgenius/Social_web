@@ -7,10 +7,13 @@ const MyPosts = (props) => {
 
     return (
         <div className={styles.wrapper}>
-            <h2>Мои посты</h2>
-            <div>Новый пост</div>
+            <h2 className={styles.title}>Мои посты</h2>
+            <div className={styles.new__post}>
+                <textarea className={styles.textarea} cols='80' rows='3' placeholder='Введите свое сообщение'></textarea>
+                <button className={styles.button}>New post</button>
+            </div>
             {postsElements}
-        </div>
+        </div >
     );
 }
 
