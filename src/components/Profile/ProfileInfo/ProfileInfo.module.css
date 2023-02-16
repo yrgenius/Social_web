@@ -1,0 +1,13 @@
+.main {
+    display: flex;
+    margin: 20px;
+}
+
+.ava {
+    align-self: center;
+    height: 50px;
+}
+
+.text {
+    align-self: center;
+}

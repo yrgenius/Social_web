@@ -3,18 +3,12 @@ import Post from './Post/Post';
 
 const MyPosts = (props) => {
 
-    // let posts = [
-    //     { id: 1, post: 'Hi, how are you?' },
-    //     { id: 2, post: 'It\'s my first post' },
-    //     { id: 3, post: 'I can use props, its cool' },
-    // ];
-
     let postsElements = props.posts.map(p => <Post message={p.post} />);
 
     return (
-        <div>
-            <h2>My posts</h2>
-            <div>New posts</div>
+        <div className={styles.wrapper}>
+            <h2>Мои посты</h2>
+            <div>Новый пост</div>
             {postsElements}
         </div>
     );
