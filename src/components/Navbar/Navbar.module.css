@@ -6,12 +6,19 @@
 
 .list {
   list-style-type: none;
+  text-align: left;
 }
 
 .list li {
   margin-bottom: 10px;
 }
 
-ul:first-child {
-  color: aqua;
+.item:hover {
+  color: blue;
+  transition: color 0.2s ease-in;
+}
+
+.active {
+  color: black;
+  transition: all 0.2s ease-in;
 }

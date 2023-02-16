@@ -1,14 +1,21 @@
 import styles from './MyPosts.module.css';
 import Post from './Post/Post';
 
-const MyPosts = () => {
+const MyPosts = (props) => {
+
+    // let posts = [
+    //     { id: 1, post: 'Hi, how are you?' },
+    //     { id: 2, post: 'It\'s my first post' },
+    //     { id: 3, post: 'I can use props, its cool' },
+    // ];
+
+    let postsElements = props.posts.map(p => <Post message={p.post} />);
+
     return (
         <div>
-            My posts
+            <h2>My posts</h2>
             <div>New posts</div>
-            <Post message='Hi, how are you?' />
-            <Post message='it my first post' />
-            <Post message='I can use props, its cool' />
+            {postsElements}
         </div>
     );
 }
