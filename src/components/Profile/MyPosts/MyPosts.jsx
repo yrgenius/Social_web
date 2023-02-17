@@ -7,7 +7,9 @@ const MyPosts = (props) => {
     let postsElements = props.posts.map(p => <Post message={p.post} avatar={props.avatar} />);
     let newPostElement = React.createRef();
     let addPost = () => {
+        debugger;
         let text = newPostElement.current.value;
+        props.addPost(text);
         console.log(text);
     }
 

@@ -8,7 +8,7 @@ const Profile = (props) => {
         <main className={styles.main}>
             <img className={styles.img} src={image} />
             <ProfileInfo />
-            <MyPosts posts={props.posts} avatars={props.avatars} />
+            <MyPosts posts={props.posts} avatars={props.avatars} addPost={props.addPost} />
         </main>
     );
 }
