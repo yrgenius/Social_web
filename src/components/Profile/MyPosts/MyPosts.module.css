@@ -23,3 +23,9 @@
   display: block;
   padding: 20px;
 }
+
+.posts_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+}

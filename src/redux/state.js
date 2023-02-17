@@ -5,6 +5,13 @@ let state = {
             { id: 2, post: 'It\'s my first post' },
             { id: 3, post: 'I can use props, its cool' },
         ],
+        avatars: [
+            { id: 1, avatar: './src/images/avatars/man.png' },
+            { id: 2, avatar: './src/images/avatars/woman.png' },
+            { id: 3, avatar: './src/images/avatars/boy.png' },
+            { id: 4, avatar: './src/images/avatars/girl.png' },
+            { id: 5, avatar: './src/images/avatars/afro.png' },
+        ],
     },
 
     messagePage: {
@@ -29,6 +36,7 @@ let state = {
             { id: 7, name: 'Hi' },
         ],
     },
+
 }
 
 export default state;

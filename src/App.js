@@ -12,7 +12,7 @@ function App(props) {
       <Navbar />
       <div className='wrapper'>
         <Routes>
-          <Route element={<Profile posts={props.posts} />} path='/profile' />
+          <Route element={<Profile posts={props.posts} avatars={props.avatars} />} path='/profile' />
           <Route element={<Dialogs dialogs={props.dialogs} messages={props.messages} />} path='/dialogs/*' />
         </Routes>
       </div>
