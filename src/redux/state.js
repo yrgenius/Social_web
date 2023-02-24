@@ -14,6 +14,7 @@ let state = {
             { id: 4, avatar: './src/images/avatars/girl.png' },
             { id: 5, avatar: './src/images/avatars/afro.png' },
         ],
+        newPostText: 'enter you post',
     },
 
     messagePage: {
@@ -41,10 +42,22 @@ let state = {
 
 }
 
-export let addPost = (postMessage) => {
-    let newPost = { id: 4, post: postMessage }
+export let addPost = () => {
+    let newPost = {
+        id: 4,
+        post: state.profilePage.newPostText
+    }
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = '';
+
     renderEntireTree(state);
 }
+
+export let updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
+    renderEntireTree(state);
+}
+
+window.state = state;
 
 export default state;

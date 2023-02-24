@@ -6,10 +6,14 @@ const MyPosts = (props) => {
 
     let postsElements = props.posts.map(p => <Post message={p.post} avatar={props.avatar} />);
     let newPostElement = React.createRef();
-    let addPost = () => {
-        debugger;
+    let addPosts = () => {
+        props.addPost();
+    }
+
+    let onChangePost = () => {
         let text = newPostElement.current.value;
-        props.addPost(text);
+        props.updateNewPostText(text);
+
         console.log(text);
     }
 
@@ -17,8 +21,12 @@ const MyPosts = (props) => {
         <div className={styles.wrapper}>
             <h2 className={styles.title}>Мои посты</h2>
             <div className={styles.new__post}>
-                <textarea className={styles.textarea} ref={newPostElement} cols='80' rows='3' placeholder='Введите свое сообщение'></textarea>
-                <button className={styles.button} onClick={addPost}>New post</button>
+                <textarea className={styles.textarea}
+                    onChange={onChangePost}
+                    ref={newPostElement} cols='80' rows='3'
+                    // placeholder='Введите свое сообщение'
+                    value={props.newPostText} />
+                <button className={styles.button} onClick={addPosts}>New post</button>
             </div>
             <div className={styles.posts_wrapper}>
                 {postsElements}
