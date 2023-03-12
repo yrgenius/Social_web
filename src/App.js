@@ -16,9 +16,8 @@ function App(props) {
 						<Profile
 							posts={props.posts}
 							avatars={props.avatars}
-							addPost={props.addPost}
 							newPostText={props.newPostText}
-							updateNewPostText={props.updateNewPostText}
+							dispatch={props.dispatch}
 						/>
 					} path='/profile'
 					/>
