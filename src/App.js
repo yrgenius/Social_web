@@ -12,21 +12,24 @@ function App(props) {
 			<Navbar />
 			<div className='wrapper'>
 				<Routes>
-					<Route element={
-						<Profile
-							posts={props.posts}
-							avatars={props.avatars}
-							newPostText={props.newPostText}
-							dispatch={props.dispatch}
-						/>
-					} path='/profile'
+					<Route
+						element={
+							<Profile
+								posts={props.posts}
+								avatars={props.avatars}
+								newPostText={props.newPostText}
+								dispatch={props.dispatch}
+							/>
+						}
+						path='/profile'
 					/>
-					<Route element={
-						<Dialogs
-							dialogs={props.dialogs}
-							messages={props.messages}
-						/>
-					} path='/dialogs/*' />
+					<Route
+						element={
+							<Dialogs
+								store={props.store}
+							/>
+						}
+						path='/dialogs/*' />
 				</Routes>
 			</div>
 		</div>

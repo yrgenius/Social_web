@@ -19,6 +19,7 @@ let renderEntireTree = (state) => {
                     dialogs={state.messagePage.dialogsData}
                     messages={state.messagePage.messagesData}
                     dispatch={store.dispatch.bind(store)}
+                    store={store}
                 />
             </BrowserRouter>
         </React.StrictMode>

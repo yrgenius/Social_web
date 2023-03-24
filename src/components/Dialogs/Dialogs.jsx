@@ -1,12 +1,22 @@
 import DialogItem from './DialogItem/DialogItem';
 import Message from './Message/Message';
+import { updateNewMessageBodyCreator, sendMessageCreator } from '../../redux/state';
 import styles from './Dialogs.module.css';
 
 const Dialogs = (props) => {
 
-    let dialogElements = props.dialogs.map((dialog) => (<DialogItem name={dialog.name} id={dialog.id} />));
+    let dialogs = props.store.getState().messagePage.dialogsData;
+    let messagesInStore = props.store.getState().messagePage.messagesData;
 
-    let messages = props.messages.map(m => (<Message message={m.name} />));
+    let dialogElements = dialogs.map((dialog) => (<DialogItem name={dialog.name} id={dialog.id} />));
+    let messages = messagesInStore.map(m => (<Message message={m.name} />));
+    let newMessageBody = props.store.getState().messagePage.newMessageBody;
+
+    let onSendMessageClick = () => { props.store.dispatch(sendMessageCreator()) }
+    let onNewMessageChange = (event) => {
+        let body = event.target.value;
+        props.store.dispatch(updateNewMessageBodyCreator(body));
+    }
 
     return (
         <div className={`${styles.wrapper}`}>
@@ -15,6 +25,14 @@ const Dialogs = (props) => {
             </ul>
             <ul className={`${styles.dialog__list}`}>
                 {messages}
+                <div>
+                    <textarea
+                        onChange={onNewMessageChange}
+                        value={newMessageBody}
+                        placeholder='Введите ваше сообщение'>
+                    </textarea>
+                    <button onClick={onSendMessageClick}>send</button>
+                </div>
             </ul>
         </div>
     );
