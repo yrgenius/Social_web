@@ -15,6 +15,7 @@ function App(props) {
 					<Route
 						element={
 							<Profile
+								store={props.store}
 								posts={props.posts}
 								avatars={props.avatars}
 								newPostText={props.newPostText}

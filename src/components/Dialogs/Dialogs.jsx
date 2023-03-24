@@ -4,13 +4,14 @@ import { updateNewMessageBodyCreator, sendMessageCreator } from '../../redux/mes
 import styles from './Dialogs.module.css';
 
 const Dialogs = (props) => {
+    // console.dir(props.store.getState());
 
-    let dialogs = props.store.getState().messagePage.dialogsData;
-    let messagesInStore = props.store.getState().messagePage.messagesData;
+    let dialogs = props.store.getState().messageReducer.dialogsData;
+    let messagesInStore = props.store.getState().messageReducer.messagesData;
 
     let dialogElements = dialogs.map((dialog) => (<DialogItem name={dialog.name} id={dialog.id} />));
     let messages = messagesInStore.map(m => (<Message message={m.name} />));
-    let newMessageBody = props.store.getState().messagePage.newMessageBody;
+    let newMessageBody = props.store.getState().messageReducer.newMessageBody;
 
     let onSendMessageClick = () => { props.store.dispatch(sendMessageCreator()) }
     let onNewMessageChange = (event) => {

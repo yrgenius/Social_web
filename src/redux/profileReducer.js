@@ -1,7 +1,24 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
-export const profileReducer = (state, action) => {
+
+let initialState = {
+    posts: [
+        { id: 1, post: 'Hi, how are you?' },
+        { id: 2, post: 'It\'s my first post' },
+        { id: 3, post: 'I can use props, its cool' },
+    ],
+    avatars: [
+        { id: 1, avatar: './src/images/avatars/man.png' },
+        { id: 2, avatar: './src/images/avatars/woman.png' },
+        { id: 3, avatar: './src/images/avatars/boy.png' },
+        { id: 4, avatar: './src/images/avatars/girl.png' },
+        { id: 5, avatar: './src/images/avatars/afro.png' },
+    ],
+    newPostText: 'enter you post',
+};
+
+export const profileReducer = (state = initialState, action) => {
 
     switch (action.type) {
 

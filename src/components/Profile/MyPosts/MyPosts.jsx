@@ -5,7 +5,7 @@ import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../r
 
 const MyPosts = (props) => {
 
-    let postsElements = props.posts.map(p => <Post message={p.post} avatar={props.avatar} />);
+    let postsElements = props.store.getState().profileReducer.posts.map(p => <Post message={p.post} avatar={props.avatar} />);
     let newPostElement = React.createRef();
 
     let addPosts = () => props.dispatch(addPostActionCreator());
